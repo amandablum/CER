@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2; }
 
 h1, .h1 {
-    font-size: 35px;
+    font-size: 50px;
     line-height: 32px;
     font-weight: 400;
     font-style: italic;
@@ -2727,7 +2727,7 @@ fieldset:disabled a.btn {
     .show > .btn-dark.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
-.post-617 .PaymentRequestButton--light, .post-617 .PaymentRequestButton--lightOutline {
+.PaymentRequestButton--light, .PaymentRequestButton--lightOutline {
     color: #4caf50;
     border: 1px solid #4caf50;
     background: transparent;
@@ -2740,7 +2740,9 @@ fieldset:disabled a.btn {
 .btn-outline-primary, button.single_add_to_cart_button.btn.btn-primary,
 .wpcf7 input[type=submit], .PaymentRequestButton--light, .PaymentRequestButton--lightOutline {
   color: #4caf50;
-  border-color: #4caf50; }
+  border-color: #4caf50; 
+  background: #ECEFF5;
+  }
   .btn-outline-primary:hover, .wpcf7 input:hover[type=submit], .PaymentRequestButton--dark:hover {
     color: #fff;
     background-color: #4caf50;
@@ -3068,15 +3070,30 @@ input[type="button"].btn-block {
     justify-content: center;
 }
 
+
 #main-menu li a:hover {
     border-bottom: 2px solid #4B5469;
     transition: ease;
-    transition-duration: .5s;
+    transition-duration: 1s;
     margin-bottom: 0;
     padding-bottom: 0;
     background: #9CB1C3;
     color: #ECEFF5;
 }
+.lastsep {
+    border-right: unset !important;
+    padding-right: unset !important;
+}
+#main-menu li a:hover {
+    border-bottom: 2px solid #4B5469;
+    transition: ease;
+    transition-duration: .2s;
+    margin-bottom: unset;
+    padding-bottom: unset;
+    background: #9CB1C3;
+    color: #ECEFF5;
+}
+
 .menu-account-menu-container #main-menu li a  {
   font-weight: normal;
   color: #555;
@@ -3087,11 +3104,6 @@ ul#main-menu {
     -ms-flex-direction: row;
     flex-direction: row;
     margin-top: 15px;
-}
-.navbar-collapse ul#main-menu {
-    display: flex;
-    justify-content: space-evenly;
-    width: 96%;
 }
 
 #main-menu li a {
@@ -3144,6 +3156,13 @@ div#wrapper-footer {
 .navbar-brand {
    margin-right: 0;
 }
+.navbar-brand.custom-logo-link img:hover {
+    width: 95%;
+    height: auto;
+    transition: ease;
+    transition-duration: 1s;
+    padding: 10px;
+}
 #wl-wrapper .wl-add-link.present {
     background: url(https://ceremonyclay.com/wp-content/uploads/2019/03/4-2-instagram-heart-png-e1553485300964.png) no-repeat 0 0 !important;
     padding-left: 20px !important;
@@ -3171,6 +3190,11 @@ h2.woocommerce-loop-product__title {
 .woocommerce ul.products li.product a img {
     border-radius: 0;
     margin: 0 0 5px;
+}
+.woocommerce ul.products li.product a img:hover {
+    filter: opacity(.75);
+    transition: ease;
+    transition-duration: .5s;
 }
 .woocommerce ul.products li.product .price {
     color: #77a464;
@@ -3234,18 +3258,78 @@ h2.woocommerce-loop-product__title {
     padding-top: 0;
 }
 .wpmenucart-display-standard {
-    padding-top: 8px;
+    margin-top: 8px !important;
 }
 .product_meta {
   display: none;
 }
+.mainnavsmall a {
+    font-size: 85%;
+    font-weight: 400 !important;
+    margin: 0 -30px !important;
+}
+.lastsep {
+    border-right: 1px solid #9CB1C3;
+    padding-right: 50px;
+}
+.menu-account-menu-container a:hover {
+    color: white !important;
+}
+
+.menu-account-menu-container a {
+    padding: 10px 5px !important;
+}
+.woocommerce .woocommerce-ordering select {
+    vertical-align: top;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    text-transform: lowercase;
+}
+.woocommerce .woocommerce-ordering {
+    margin: 0;
+}
+.woocommerce .woocommerce-result-count {
+    display: none;
+}
+.wpb_wl_images {
+    padding: 5px;
+}
+.woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-disabled {
+    width: 50%;
+    margin: 0 auto;
+}
+.woocommerce div.product form.cart div.quantity {
+    float: unset;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+}
+.PaymentRequestButton.baseline-offset .PaymentRequestButton-label {
+    color: red;
+    z-index: 99999;
+}
+.PaymentRequestButton-border {
+    border: 1px solid #4caf50;
+    background: #ECEFF5;
+    color: #4caf50;
+}
+.woocommerce table.shop_table {
+    background: #f9f9f9;
+}
+.coupon button.btn.btn-outline-primary, input#coupon_code {
+    font-size: 12px;
+}
+
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
     right: auto;
     left: 0; }
   .dropdown-menu-sm-right {
     right: 0;
-    left: auto; } }
+    left: auto; } 
+
+}
 
 @media (min-width: 768px) {
   .dropdown-menu-md-left {
@@ -3253,7 +3337,20 @@ h2.woocommerce-loop-product__title {
     left: 0; }
   .dropdown-menu-md-right {
     right: 0;
-    left: auto; } }
+    left: auto; } 
+ul#main-menu {
+    width: 100%;
+}
+.mainnavsmall a {
+    margin: 2px 0 0 0 !important;
+}
+.lastsep {
+    border-right: 1px solid #9CB1C3 !important;
+    padding-right: 5px !important;
+        transition: ease;
+    transition-duration: 1s;
+}
+}
 
 @media (min-width: 992px) {
   .dropdown-menu-lg-left {
@@ -3261,7 +3358,14 @@ h2.woocommerce-loop-product__title {
     left: 0; }
   .dropdown-menu-lg-right {
     right: 0;
-    left: auto; } }
+    left: auto; } 
+.lastsep {
+    border-right: 1px solid #9CB1C3 !important;
+    padding-right: 50px !important;
+    transition: ease;
+    transition-duration: 1s;
+}
+}
 
 @media (min-width: 1200px) {
   .dropdown-menu-xl-left {
@@ -4738,7 +4842,6 @@ h2.woocommerce-loop-product__title {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap; }
@@ -4839,7 +4942,24 @@ h2.woocommerce-loop-product__title {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; } 
+    .navbar-collapse ul#main-menu {
+    display: block;
+    background: #f9f9f9 !important;
+  }
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: unset;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: unset;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+}
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 100%;
+}
+}
 
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -4871,16 +4991,34 @@ h2.woocommerce-loop-product__title {
       -ms-flex-preferred-size: auto;
           flex-basis: auto; }
     .navbar-expand-md .navbar-toggler {
-      display: none; } }
+      display: none; } 
+
+.woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
+    width: 30.75%;
+}
+}
 
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; } 
+
+}
 
 @media (min-width: 992px) {
-  .navbar-expand-lg {
+  .navbar-collapse ul#main-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 96%;
+}
+.related .products .woocommerce ul.products[class*=columns-] li.product, .related .products .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 20.75%;
+}
+.woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
+    width: 30.75%;
+}
+.navbar-expand-lg {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -4910,12 +5048,13 @@ h2.woocommerce-loop-product__title {
           flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
       display: none; } }
-
+/*! menu adjustments */
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; } 
+}
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -5007,7 +5146,7 @@ h2.woocommerce-loop-product__title {
   border-color: rgba(0, 0, 0, 0.1); }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+   background-image: url("https://ceremonyclay.com/wp-content/themes/understrap-child/css/images/menu.svg"); }
 
 .navbar-light .navbar-text {
   color: rgba(0, 0, 0, 0.5); }
@@ -5039,7 +5178,7 @@ h2.woocommerce-loop-product__title {
   border-color: rgba(255, 255, 255, 0.1); }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  background-image: url("https://ceremonyclay.com/wp-content/themes/understrap-child/css/images/menu.svg"); }
 
 .navbar-dark .navbar-text {
   color: rgba(255, 255, 255, 0.5); }

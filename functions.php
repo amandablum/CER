@@ -116,11 +116,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 add_action( 'widgets_init', 'understrap_widgets_init' );
 
 
-add_action( 'woocommerce_after_shop_loop_item', 'bbloomer_custom_action', 15 );
- 
-function bbloomer_custom_action() {
-echo ' <input type="hidden" name="wlid" id="wlid"><input type="hidden" name="wl_from_single_product" value="1"><input type="hidden" name="add-to-wishlist-type" value="simple"><div id="wl-wrapper" class="woocommerce wl-button-wrap wl-row wl-clear"> echo ' <input type="hidden" name="wlid" id="wlid"><input type="hidden" name="wl_from_single_product" value="1"><input type="hidden" name="add-to-wishlist-type" value="simple"><div id="wl-wrapper" class="woocommerce wl-button-wrap wl-row wl-clear">
-            
-    <a rel="nofollow" href="" data-productid="442" data-listid="" class="wl-add-to wl-add-to-single  wl-add-link present"></a>      <a rel="nofollow" href="/product/artichoke-vessels/?add-to-wishlist-itemid='.get_the_id().'" data-productid="'.get_the_id().'" data-listid="" class="wl-add-to wl-add-to-single  wl-add-link present"></a>
-</div>' ;   </div>' ;
-}   }
+// Stripe provides a filter for you to add custom Stripe Elements Styling
+// See full documentation from Stripe on what elements are available to be styled here:
+// https://stripe.com/docs/stripe-js/reference#element-options
+
