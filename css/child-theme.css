@@ -3320,6 +3320,26 @@ h2.woocommerce-loop-product__title {
 .coupon button.btn.btn-outline-primary, input#coupon_code {
     font-size: 12px;
 }
+.site-info {
+    text-align: left;
+    margin-left: 40px;
+}
+ul#menu-footer-1, ul#menu-middle-footer {
+    list-style: none;
+    text-align: left;
+}
+ul#menu-footer-1 a:hover, ul#menu-middle-footer a:hover {
+    color: #A2D9F0;
+}
+ul#menu-footer-1 a, ul#menu-middle-footer a {
+    color: #ECEFF5;
+}
+.juicer-feed h1.referral {
+    display: none;
+}
+span.footerstuff {
+    margin: 20px 20px 5px 20px;
+}
 
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
